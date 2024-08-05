@@ -1,0 +1,1 @@
+This Django project allows users to perform basic data analysis with their data and visualize the data. The results and visualizations are displayed on a web page. List of dependencies can be found in requirements.txt. Ensure these packages are installed in your virtual environment:
