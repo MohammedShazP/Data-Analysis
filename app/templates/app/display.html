@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data</title>
+</head>
+<body>
+<h1 style="text-align : center;">Details</h1>
+<div>
+    <h2>Few Data</h2>
+{{ few_rows|safe }}
+</div>
+
+<div>
+<h2>Summary statistics(mean, median, standard deviation)</h2>
+{{ summary_statistics|safe }}
+</div>
+
+<div>
+<h2>Null Value Table</h2>
+{{ null_values|safe }}
+</div>
+
+<div>
+    <h2>Histograms</h2>
+{% for column,url in plots.items %}
+        <img src="data:image/png;base64,{{ url }}" alt="Histogram">
+{% endfor %}
+    </div>
+</body>
+</html>
